@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Информация о датчиках</title>
+</head>
+<body>
+    <h1>Информация о датчиках</h1>
+    <table>
+        <tr>
+            <th>Наименование датчика</th>
+            <th>Описание</th>
+            <th>Температура</th>
+            <th>Дата</th>
+        </tr>
+        {% for measurement in measurements %}
+        <tr>
+            <td>{{ measurement.sensor.name }}</td>
+            <td>{{ measurement.sensor.description }}</td>
+            <td>{{ measurement.temperature }}</td>
+            <td>{{ measurement.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
